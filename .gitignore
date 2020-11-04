@@ -1,4 +1,4 @@
 .idea/
 dravelopsopentripplanner.iml
-classes/
-target/
+graphs/
+otp-1.4.0-shaded.jar
