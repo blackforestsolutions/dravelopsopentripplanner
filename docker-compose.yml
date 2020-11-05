@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  otp:
+    build: .
+    image: blackforestsolutions/dravelopsopentripplanner:latest
+    ports:
+      - 8089:8089
+    volumes:
+      - ./graphs:/var/otp/graphs
+    environment:
+      - JAVA_OPTIONS=-Xmx2G
+    command:
+      [
+          '--server',
+          '--analyst',
+          '--autoScan',
+          '--insecure',
+          '--verbose',
+          '--port',
+          '8089',
+          '--securePort',
+          '8090'
+      ]
