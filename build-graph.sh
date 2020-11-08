@@ -47,10 +47,6 @@ printf "\nSuccessfully downloaded map"
 
 chmod 700 otp-$OTP_VERSION-shaded.jar
 
-# Copy otp-config-files
-cp $PWD/otpconfigs/build-config.json $PWD/graphs/$REGION/
-cp $PWD/otpconfigs/router-config.json $PWD/graphs/$REGION/
-
 #Build the graph
 printf "\nStart Build Graph with otp"
 java $JAVA_OPTIONS -jar otp-$OTP_VERSION-shaded.jar --build graphs/$REGION
