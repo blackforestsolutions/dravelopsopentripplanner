@@ -1,17 +1,5 @@
-OTP_VERSION=1.4.0
-CONTINENT="europe"
-COUNTRY="germany"
-REGION="bw"
-JAVA_OPTIONS="-Xmx2G"
-REPOSITORY=blackforestsolutions/dravelopsopentripplanner:v$1
-
-if [ -z $1 ]
-then
-  echo "ERROR: NO VERSION PARAMETER LIKE 1.0.0"
-  exit
-fi
-
-declare -A GTFS_SUPPLIERS=( ["sbg"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/sbg.zip" )
+BASEDIR=$(dirname "$0")
+source $BASEDIR/config.sh
 
 #Download otp version
 printf "\nStarting download otp version $OTP_VERSION"
