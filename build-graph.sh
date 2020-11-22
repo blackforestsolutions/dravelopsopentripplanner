@@ -10,16 +10,16 @@ mkdir graphs
 
 #download gtfs
 printf "\nStarting download Gtfs:"
-for key in ${!GTFS_SUPPLIERS[@]}; do
-    GTFS_SUPPLY_LINK=${GTFS_SUPPLIERS[${key}]}
+for GTFS_SUPPLIER in ${!GTFS_SUPPLIERS[@]}; do
+    GTFS_SUPPLY_LINK=${GTFS_SUPPLIERS[${GTFS_SUPPLIER}]}
     cd graphs
     mkdir -p $REGION
     cd $REGION
     printf "\nStarting download $GTFS_SUPPLIER from link $GTFS_SUPPLY_LINK \n"
-    curl $GTFS_SUPPLY_LINK -O /graphs/$KEY
+    curl $GTFS_SUPPLY_LINK -O /graphs/$GTFS_SUPPLIER
     cd ..
     cd ..
-    printf "\nFinished download. $KEY was saved in /graphs/$REGION"
+    printf "\nFinished download. $GTFS_SUPPLIER was saved in /graphs/$REGION"
 done
 printf "\nSuccessfully downloaded Gtfs"
 
