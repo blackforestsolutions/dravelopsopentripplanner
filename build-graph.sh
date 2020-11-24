@@ -1,17 +1,5 @@
-OTP_VERSION=1.4.0
-CONTINENT="europe"
-COUNTRY="germany"
-REGION="bw"
-JAVA_OPTIONS="-Xmx2G"
-REPOSITORY=blackforestsolutions/dravelopsopentripplanner:v$1
-
-if [ -z $1 ]
-then
-  echo "ERROR: NO VERSION PARAMETER LIKE 1.0.0"
-  exit
-fi
-
-declare -A GTFS_SUPPLIERS=( ["sbg"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/sbg.zip" )
+BASEDIR=$(dirname "$0")
+source $BASEDIR/config.sh
 
 #Download otp version
 printf "\nStarting download otp version $OTP_VERSION"
@@ -22,16 +10,16 @@ mkdir graphs
 
 #download gtfs
 printf "\nStarting download Gtfs:"
-for key in ${!GTFS_SUPPLIERS[@]}; do
-    GTFS_SUPPLY_LINK=${GTFS_SUPPLIERS[${key}]}
+for GTFS_SUPPLIER in ${!GTFS_SUPPLIERS[@]}; do
+    GTFS_SUPPLY_LINK=${GTFS_SUPPLIERS[${GTFS_SUPPLIER}]}
     cd graphs
     mkdir -p $REGION
     cd $REGION
     printf "\nStarting download $GTFS_SUPPLIER from link $GTFS_SUPPLY_LINK \n"
-    curl $GTFS_SUPPLY_LINK -O /graphs/$KEY
+    curl $GTFS_SUPPLY_LINK -O /graphs/$GTFS_SUPPLIER
     cd ..
     cd ..
-    printf "\nFinished download. $KEY was saved in /graphs/$REGION"
+    printf "\nFinished download. $GTFS_SUPPLIER was saved in /graphs/$REGION"
 done
 printf "\nSuccessfully downloaded Gtfs"
 
@@ -40,7 +28,7 @@ printf "\nStarting download map material Continent: $CONTINENT, Country: $COUNTR
 cd graphs
 mkdir -p $REGION
 cd $REGION
-curl https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf -O /graphs/$REGION
+curl $OSM_MAP -O /graphs/$REGION
 cd ..
 cd ..
 printf "\nSuccessfully downloaded map"
