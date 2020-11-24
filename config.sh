@@ -2,8 +2,9 @@ OTP_VERSION=1.4.0
 CONTINENT="europe"
 COUNTRY="germany"
 REGION="bw"
-JAVA_OPTIONS="-Xmx2G"
+JAVA_OPTIONS="-Xmx12G"
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner:v$1
+OSM_MAP=https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf
 #
 declare -A GTFS_SUPPLIERS=(
 ["HVN"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/hnv.zip",
@@ -39,6 +40,8 @@ echo "COUNTRY is $COUNTRY"
 echo "REGION is $REGION"
 echo "JAVA_OPTIONS is $JAVA_OPTIONS"
 echo "REPOSITORY is $REPOSITORY"
+echo "OSM_MAP is $OSM_MAP"
+
 for GTFS_SUPPLIER in ${!GTFS_SUPPLIERS[@]}; do
     GTFS_SUPPLY_LINK=${GTFS_SUPPLIERS[${GTFS_SUPPLIER}]}
     echo "GTFS_SUPPLIER is $GTFS_SUPPLIER and link is $GTFS_SUPPLY_LINK"

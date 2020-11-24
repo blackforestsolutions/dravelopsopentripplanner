@@ -28,7 +28,7 @@ printf "\nStarting download map material Continent: $CONTINENT, Country: $COUNTR
 cd graphs
 mkdir -p $REGION
 cd $REGION
-curl https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf -O /graphs/$REGION
+curl $OSM_MAP -O /graphs/$REGION
 cd ..
 cd ..
 printf "\nSuccessfully downloaded map"
