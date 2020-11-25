@@ -1,3 +1,4 @@
+DEPLOY_FOLDER=bw
 OTP_VERSION=1.4.0
 CONTINENT="europe"
 COUNTRY="germany"
