@@ -1,11 +1,11 @@
 version: '3.7'
-
+networks:
+  dravelops:
+    name: bw_network
 services:
   otp:
     build: .
     image: blackforestsolutions/dravelopsopentripplanner:latest
-    ports:
-      - 8089:8089
     volumes:
       - ./graphs:/var/otp/graphs
     environment:
@@ -22,3 +22,5 @@ services:
           '--securePort',
           '8090'
       ]
+    networks:
+      - dravelops
