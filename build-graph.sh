@@ -1,12 +1,12 @@
 BASEDIR=$(dirname "$0")
-#This script must be called with "sh build-graph.sh $1 config.sh"
-CONFIG_FILE_NAME=config_test.sh
+#This script must be called with "sh build-graph.sh $1 bw"
+PROJECT_NAME=bw
 if [ $# != 0 ]
 then
-    CONFIG_FILE_NAME="$1"
+    PROJECT_NAME="$1"
     shift 1
 fi
-source $BASEDIR/config/$CONFIG_FILE_NAME
+source $BASEDIR/projects/$PROJECT_NAME/config.sh
 
 #Download otp version
 printf "\nStarting download otp version $OTP_VERSION"
@@ -50,6 +50,6 @@ printf "\nBuild Graph with otp was successful"
 # build, start, tag and push container
 docker-compose up -d
 
-docker tag blackforestsolutions/dravelopsopentripplanner:latest $REPOSITORY
+docker tag blackforestsolutions/dravelopsopentripplanner:latest
 
-docker push $REPOSITORY
+docker push blackforestsolutions/dravelopsopentripplanner:latest
