@@ -9,7 +9,7 @@ services:
     volumes:
       - ./graphs:/var/otp/graphs
     environment:
-      - JAVA_OPTIONS=-Xmx4G
+      - JAVA_OPTIONS=-Xmx2G
     command:
       [
           '--server',
