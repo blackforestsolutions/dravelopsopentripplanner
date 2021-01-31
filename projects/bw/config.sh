@@ -1,12 +1,9 @@
 DEPLOY_FOLDER=bw
 OTP_VERSION=1.4.0
-CONTINENT="europe"
-COUNTRY="germany"
-REGION="baden-wuerttemberg"
-JAVA_OPTIONS="-Xmx4G"
+JAVA_OPTIONS="-Xmx2G"
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner:v$1
-OSM_MAP="https://download.geofabrik.de/$CONTINENT/$COUNTRY/$REGION-latest.osm.pbf"
-#
+OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf"
+
 declare -A GTFS_SUPPLIERS=(
 #["VRN"]="http://vrn.de/opendata/sites/default/files/uploads/data/2020-11-04/vrn_gtfs_03.11.2020.zip"
 #["HVN"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/hnv.zip"
@@ -38,9 +35,6 @@ declare -A GTFS_SUPPLIERS=(
 )
 
 echo "OTP_VERSION is $OTP_VERSION"
-echo "CONTINENT is $CONTINENT"
-echo "COUNTRY is $COUNTRY"
-echo "REGION is $REGION"
 echo "JAVA_OPTIONS is $JAVA_OPTIONS"
 echo "REPOSITORY is $REPOSITORY"
 echo "OSM_MAP is $OSM_MAP"
