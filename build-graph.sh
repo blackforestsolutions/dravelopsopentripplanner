@@ -46,5 +46,9 @@ printf "\nStart Build Graph with otp"
 java $JAVA_OPTIONS -jar otp-$OTP_VERSION-shaded.jar --build graphs/$DEPLOY_FOLDER
 printf "\nBuild Graph with otp was successful"
 
-# build and start container
+# build, start, tag and push container
 docker-compose up -d
+
+docker tag blackforestsolutions/dravelopsopentripplanner:latest
+
+docker push blackforestsolutions/dravelopsopentripplanner:latest
