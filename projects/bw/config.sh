@@ -1,7 +1,8 @@
 DEPLOY_FOLDER=bw
-OTP_VERSION=1.4.0
+RELEASE_VERSION=0.0.1
+OTP_VERSION=2.0.0
 JAVA_OPTIONS="-Xmx2G"
-REPOSITORY=blackforestsolutions/dravelopsopentripplanner:v$1
+REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf"
 
 declare -A GTFS_SUPPLIERS=(
@@ -35,6 +36,7 @@ declare -A GTFS_SUPPLIERS=(
 )
 
 echo "OTP_VERSION is $OTP_VERSION"
+echo "RELEASE_VERSION is $RELEASE_VERSION"
 echo "JAVA_OPTIONS is $JAVA_OPTIONS"
 echo "REPOSITORY is $REPOSITORY"
 echo "OSM_MAP is $OSM_MAP"

@@ -18,9 +18,5 @@
     "FERRY": 1800,
     "AIRPLANE": 3600
   },
-  "updaters": [
-    {
-
-    }
-  ]
+  "updaters": []
 }

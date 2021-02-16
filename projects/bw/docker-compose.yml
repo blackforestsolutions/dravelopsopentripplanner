@@ -1,0 +1,11 @@
+version: '3.7'
+networks:
+  dravelops:
+    name: bw_network
+services:
+  otp:
+    image: blackforestsolutions/dravelopsopentripplanner:0.0.1
+    environment:
+      - JAVA_OPTIONS=-Xmx2G
+    networks:
+      - dravelops
