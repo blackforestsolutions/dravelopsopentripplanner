@@ -1,5 +1,5 @@
 DEPLOY_FOLDER=bw
-RELEASE_VERSION=0.0.1
+RELEASE_VERSION=0.0.1-bw
 OTP_VERSION=2.0.0
 JAVA_OPTIONS="-Xmx26G"
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
