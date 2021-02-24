@@ -1,0 +1,20 @@
+{
+  "routingDefaults": {
+    "locale": "de",
+    "numItineraries": 5,
+    "showIntermediateStops": true
+  },
+  "streetRoutingTimeout": 4,
+  "boardTimes": {
+    "BICYCLE": 300,
+    "AIRPLANE": 2700,
+    "FERRY": 1200
+  },
+  "alightTimes": {
+    "BICYCLE": 300,
+    "CAR": 450,
+    "FERRY": 1800,
+    "AIRPLANE": 3600
+  },
+  "updaters": []
+}
