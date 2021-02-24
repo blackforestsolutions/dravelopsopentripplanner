@@ -6,6 +6,8 @@ services:
   otp:
     image: blackforestsolutions/dravelopsopentripplanner:0.0.1
     environment:
-      - JAVA_OPTIONS=-Xmx2G
+      - JAVA_OPTIONS=-Xmx26G
     networks:
       - dravelops
+    ports:
+      - 8080:8080
