@@ -1,7 +1,6 @@
 {
-  "htmlAnnotations": false,
+  "dataImportReport": false,
   "subwayAccessTime": 0.0,
-  "stationTransfers": true,
   "staticBikeRental": false,
   "staticBikeParkAndRide": false,
   "maxInterlineDistance": 200.0,

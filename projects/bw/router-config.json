@@ -2,11 +2,9 @@
   "routingDefaults": {
     "locale": "de",
     "numItineraries": 5,
-    "optimize": "QUICK",
     "showIntermediateStops": true
   },
-  "timeout": 12,
-  "timeouts": [6, 4, 2],
+  "streetRoutingTimeout": 4,
   "boardTimes": {
     "BICYCLE": 300,
     "AIRPLANE": 2700,
