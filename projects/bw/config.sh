@@ -30,7 +30,6 @@ declare -A GTFS_SUPPLIERS=(
 ["VPE"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vpe.zip"
 ["RBS"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/rbs.zip"
 ["BlaBlaBus"]="https://api.idbus.com/gtfs.zip"
-["Flixbus"]="http://data.ndovloket.nl/flixbus/flixbus-eu.zip"
 ["KVV"]="https://projekte.kvv-efa.de/GTFS/google_transit.zip"
 )
 
