@@ -1,7 +1,6 @@
 DEPLOY_FOLDER=germany
 RELEASE_VERSION=0.0.1-germany
 OTP_VERSION=2.0.0
-JAVA_OPTIONS="-Xmx26G"
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany-latest.osm.pbf"
 
