@@ -1,7 +1,5 @@
 DEPLOY_FOLDER=bw
-RELEASE_VERSION=0.0.1
-OTP_VERSION=2.0.0
-JAVA_OPTIONS="-Xmx2G"
+RELEASE_VERSION=1.0.0
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf"
 
@@ -35,9 +33,7 @@ declare -A GTFS_SUPPLIERS=(
 #["KVV"]="https://projekte.kvv-efa.de/GTFS/google_transit.zip"
 )
 
-echo "OTP_VERSION is $OTP_VERSION"
 echo "RELEASE_VERSION is $RELEASE_VERSION"
-echo "JAVA_OPTIONS is $JAVA_OPTIONS"
 echo "REPOSITORY is $REPOSITORY"
 echo "OSM_MAP is $OSM_MAP"
 echo "DEPLOY_FOLDER is $DEPLOY_FOLDER"
