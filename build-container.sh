@@ -1,5 +1,5 @@
 BASEDIR=$(dirname "$0")
-# This script must be called with "sh build-container.sh $1 bw"
+# This script must be called with "sh build-container.sh $1 bw-fast"
 PROJECT_NAME=bw
 if [ $# != 0 ]; then
   PROJECT_NAME="$1"
@@ -29,11 +29,11 @@ printf "\nSuccessfully downloaded map"
 
 # build, tag and push container
 printf "\nStarting to build, tag and push container to $REPOSITORY:$RELEASE_VERSION and $REPOSITORY:latest"
-docker build -t $REPOSITORY:latest -t $REPOSITORY:$RELEASE_VERSION ../../
+docker build -t $REPOSITORY:latest -t $REPOSITORY:$DEPLOY_FOLDER-$RELEASE_VERSION --build-arg "DEPLOY_FOLDER=$DEPLOY_FOLDER" ../../
 
 docker push $REPOSITORY:latest
 
-docker push $REPOSITORY:$RELEASE_VERSION
+docker push $REPOSITORY:$DEPLOY_FOLDER-$RELEASE_VERSION
 printf "\nFinished to build, tag and push containers"
 
 # run container

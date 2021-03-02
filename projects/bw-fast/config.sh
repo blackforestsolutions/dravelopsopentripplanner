@@ -1,4 +1,4 @@
-DEPLOY_FOLDER=bw
+DEPLOY_FOLDER=bw-fast
 RELEASE_VERSION=1.0.0
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf"
