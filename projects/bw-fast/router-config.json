@@ -19,7 +19,7 @@
     "dynamicSearchWindow": {
       "minWinTimeMinutes": 180,
       "maxWinTimeMinutes": 180,
-      "stepMinutes": 5
+      "stepMinutes": 10
     }
   },
   "streetRoutingTimeout": 5,

@@ -17,9 +17,9 @@
   "transit": {
     "searchThreadPoolSize": 10,
     "dynamicSearchWindow": {
-      "minWinTimeMinutes": 1440,
-      "maxWinTimeMinutes": 1440,
-      "stepMinutes": 5
+      "minWinTimeMinutes": 480,
+      "maxWinTimeMinutes": 480,
+      "stepMinutes": 10
     }
   },
   "streetRoutingTimeout": 5,
