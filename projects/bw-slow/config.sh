@@ -1,5 +1,5 @@
 DEPLOY_FOLDER=bw-slow
-RELEASE_VERSION=1.0.0
+RELEASE_VERSION=1.1.0
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg-latest.osm.pbf"
 
