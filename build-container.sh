@@ -29,7 +29,7 @@ printf "\nSuccessfully downloaded map"
 
 # build, tag and push container
 printf "\nStarting to build, tag and push container to $REPOSITORY:$RELEASE_VERSION and $REPOSITORY:latest"
-docker build -t $REPOSITORY:latest -t $REPOSITORY:$DEPLOY_FOLDER-$RELEASE_VERSION --build-arg "DEPLOY_FOLDER=$DEPLOY_FOLDER" ../../
+docker build -t $REPOSITORY:latest -t $REPOSITORY:$DEPLOY_FOLDER-$RELEASE_VERSION --build-arg "DEPLOY_FOLDER_BUILD_TIME=$DEPLOY_FOLDER" ../../
 
 docker push $REPOSITORY:latest
 

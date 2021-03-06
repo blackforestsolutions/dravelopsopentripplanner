@@ -1,0 +1,13 @@
+version: '3.7'
+networks:
+  dravelops:
+    name: bw_network
+services:
+  otp:
+    image: blackforestsolutions/dravelopsopentripplanner:latest
+    environment:
+      - JAVA_OPTIONS=-Xmx26G
+    networks:
+      - dravelops
+    ports:
+      - 8080:8080
