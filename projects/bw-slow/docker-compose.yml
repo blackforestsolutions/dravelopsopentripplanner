@@ -7,7 +7,7 @@ services:
     image: blackforestsolutions/dravelopsopentripplanner:bw-slow-1.1.0
     environment:
       - DEPLOY_FOLDER_RUN_TIME=bw-slow
-      - JAVA_OPTIONS=-Xmx16G
+      - JAVA_OPTIONS=-Xmx3G
       - PORT=9002
       - SECURE_PORT=9003
     networks:
