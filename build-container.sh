@@ -37,6 +37,6 @@ docker push $REPOSITORY:$DEPLOY_FOLDER-$RELEASE_VERSION
 printf "\nFinished to build, tag and push containers"
 
 # run container
-docker-compose up
+#docker-compose up
 
 printf "\nSuccessfully created OpenTripPlanner"
