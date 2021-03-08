@@ -4,10 +4,10 @@ networks:
     name: bw_network
 services:
   otp-slow:
-    image: blackforestsolutions/dravelopsopentripplanner:bw-slow-1.1.0
+    image: blackforestsolutions/dravelopsopentripplanner:bw-slow-1.1.1
     environment:
       - DEPLOY_FOLDER_RUN_TIME=bw-slow
-      - JAVA_OPTIONS=-Xmx3G
+      - JAVA_OPTIONS=-Xmx2G
       - PORT=9002
       - SECURE_PORT=9003
     networks:

@@ -1,12 +1,12 @@
 DEPLOY_FOLDER=bw-fast
-RELEASE_VERSION=1.1.0
+RELEASE_VERSION=1.1.1
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf"
 
 declare -A GTFS_SUPPLIERS=(
-["SPNV"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwspnv.zip"
+#["SPNV"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwspnv.zip"
 #["NVH"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/nvh.zip"
-["ubahn"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwsbahnubahn.zip"
+#["ubahn"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bwsbahnubahn.zip"
 #["VAG-FR"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vagfr.zip"
 #["VRN"]="http://www.vrn.de/opendata/sites/default/files/uploads/data/2021-01-04/vrn_gtfs_11.12.2020_0.zip"
 #["HVN"]="https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/hnv.zip"

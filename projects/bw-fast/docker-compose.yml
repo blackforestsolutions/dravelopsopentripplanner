@@ -4,10 +4,10 @@ networks:
     name: bw_network
 services:
   otp-fast:
-    image: blackforestsolutions/dravelopsopentripplanner:bw-fast-1.1.0
+    image: blackforestsolutions/dravelopsopentripplanner:bw-fast-1.1.1
     environment:
       - DEPLOY_FOLDER_RUN_TIME=bw-fast
-      - JAVA_OPTIONS=-Xmx3G
+      - JAVA_OPTIONS=-Xmx2G
       - PORT=9000
       - SECURE_PORT=9001
     networks:
