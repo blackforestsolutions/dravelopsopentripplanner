@@ -1,0 +1,16 @@
+version: '3.7'
+networks:
+  dravelops:
+    name: bw_network
+services:
+  otp-slow:
+    image: blackforestsolutions/dravelopsopentripplanner:sbg-slow-0.0.1
+    environment:
+      - DEPLOY_FOLDER_RUN_TIME=sbg-slow
+      - JAVA_OPTIONS=-Xmx2G
+      - PORT=9002
+      - SECURE_PORT=9003
+    networks:
+      - dravelops
+    ports:
+      - 9002:9002
