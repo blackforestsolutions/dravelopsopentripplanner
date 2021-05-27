@@ -1,5 +1,5 @@
 DEPLOY_FOLDER=hvv-fast
-RELEASE_VERSION=0.0.1
+RELEASE_VERSION=0.0.2
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf"
 
