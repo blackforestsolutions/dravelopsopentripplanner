@@ -1,0 +1,16 @@
+version: '3.7'
+networks:
+  dravelops:
+    name: hvv_network
+services:
+  otp-slow:
+    image: blackforestsolutions/dravelopsopentripplanner:hvv-slow-0.0.2
+    environment:
+      - DEPLOY_FOLDER_RUN_TIME=hvv-slow
+      - JAVA_OPTIONS=-Xmx2G
+      - PORT=9002
+      - SECURE_PORT=9003
+    networks:
+      - dravelops
+    ports:
+      - 9002:9002

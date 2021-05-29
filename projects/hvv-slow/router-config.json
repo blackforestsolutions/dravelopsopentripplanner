@@ -1,0 +1,27 @@
+{
+  "routingDefaults": {
+    "locale": "de",
+    "showIntermediateStops": true,
+    "boardSlackForMode": {
+      "BICYCLE": 300,
+      "AIRPLANE": 2700,
+      "FERRY": 1200
+    },
+    "alightSlackForMode": {
+      "BICYCLE": 300,
+      "CAR": 450,
+      "FERRY": 1800,
+      "AIRPLANE": 3600
+    }
+  },
+  "transit": {
+    "searchThreadPoolSize": 10,
+    "dynamicSearchWindow": {
+      "minWinTimeMinutes": 480,
+      "maxWinTimeMinutes": 480,
+      "stepMinutes": 10
+    }
+  },
+  "streetRoutingTimeout": 5,
+  "updaters": []
+}
