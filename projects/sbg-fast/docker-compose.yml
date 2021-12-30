@@ -4,7 +4,7 @@ networks:
     name: sbg_network
 services:
   otp-fast:
-    image: blackforestsolutions/dravelopsopentripplanner:sbg-fast-0.0.1
+    image: blackforestsolutions/dravelopsopentripplanner:sbg-fast-0.0.2
     environment:
       - DEPLOY_FOLDER_RUN_TIME=sbg-fast
       - JAVA_OPTIONS=-Xmx2G
