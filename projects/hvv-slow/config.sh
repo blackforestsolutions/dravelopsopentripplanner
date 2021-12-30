@@ -1,10 +1,10 @@
 DEPLOY_FOLDER=hvv-slow
-RELEASE_VERSION=0.0.2
+RELEASE_VERSION=0.0.3
 REPOSITORY=blackforestsolutions/dravelopsopentripplanner
 OSM_MAP="https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf"
 
 declare -A GTFS_SUPPLIERS=(
-["HVV"]="http://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/cba27ff1-ee81-448c-a266-3de320e4c88c/Upload__HVV_Rohdaten_GTFS_Fpl_20210512.zip"
+["HVV"]="http://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/3343dbd9-807d-4019-a4ca-1df50946de07/Upload__HVV_Rohdaten_GTFS_Fpl_20211122_Uebergang.zip"
 )
 
 echo "RELEASE_VERSION is $RELEASE_VERSION"
