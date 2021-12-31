@@ -3,11 +3,11 @@ networks:
   dravelops:
     name: hvv_network
 services:
-  otp-slow:
-    image: blackforestsolutions/dravelopsopentripplanner:hvv-fast-0.0.2
+  otp-fast:
+    image: blackforestsolutions/dravelopsopentripplanner:hvv-fast-0.0.3
     environment:
       - DEPLOY_FOLDER_RUN_TIME=hvv-fast
-      - JAVA_OPTIONS=-Xmx2G
+      - JAVA_OPTIONS=-Xmx3G
       - PORT=9000
       - SECURE_PORT=9001
     networks:
