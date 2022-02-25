@@ -4,7 +4,7 @@ networks:
     name: hvv_network
 services:
   otp-fast:
-    image: blackforestsolutions/dravelopsopentripplanner:hvv-fast-0.0.3
+    image: blackforestsolutions/dravelopsopentripplanner:hvv-fast-0.1.1
     environment:
       - DEPLOY_FOLDER_RUN_TIME=hvv-fast
       - JAVA_OPTIONS=-Xmx3G

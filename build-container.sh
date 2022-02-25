@@ -1,6 +1,9 @@
 BASEDIR=$(dirname "$0")
 # This script must be called with "sh build-container.sh $1 bw-fast"
 PROJECT_NAME=bw
+FEED_INFO=feed_info.txt
+TRANSLATIONS=translations.txt
+
 if [ $# != 0 ]; then
   PROJECT_NAME="$1"
   shift 1
@@ -17,8 +20,19 @@ for GTFS_SUPPLIER in ${!GTFS_SUPPLIERS[@]}; do
 
   printf "\nStarting download $GTFS_SUPPLIER from link $GTFS_SUPPLY_LINK \n"
   curl $GTFS_SUPPLY_LINK -o "$GTFS_SUPPLIER.gtfs.zip"
-
   printf "\nFinished download. $GTFS_SUPPLIER was saved in $DEPLOY_FOLDER"
+
+  printf "\nStarting to replace $FEED_INFO"
+  if [[ `unzip -l $GTFS_SUPPLIER.gtfs.zip | grep $TRANSLATIONS` ]]; then
+    printf "\n$GTFS_SUPPLIER.gtfs.zip has $TRANSLATIONS and consequently $FEED_INFO could not be replaced!"
+    exit
+  fi
+  echo "feed_publisher_name,feed_publisher_url,feed_lang,feed_id" > $FEED_INFO
+  echo "$GTFS_SUPPLIER,https://$GTFS_SUPPLIER.com,$LANGUAGE,$GTFS_SUPPLIER" >> $FEED_INFO
+  zip $GTFS_SUPPLIER.gtfs.zip $FEED_INFO
+  rm $FEED_INFO
+  printf "\nSuccessfully replaced $FEED_INFO"
+
 done
 printf "\nSuccessfully downloaded Gtfs"
 
