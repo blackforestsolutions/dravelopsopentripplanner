@@ -1,9 +1,0 @@
-{
-  "dataImportReport": false,
-  "subwayAccessTime": 0.0,
-  "staticBikeRental": false,
-  "staticBikeParkAndRide": false,
-  "maxInterlineDistance": 200.0,
-  "islandWithStopsMaxSize": 0,
-  "maxTransferDistance": 2000.0
-}
